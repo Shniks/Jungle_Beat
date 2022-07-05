@@ -1,7 +1,9 @@
 ---
 Project Title: Jungle Beat
+Data Structure: Linked List
 Author: Nikhil Shahi
 Date: July 4, 2022
+Test Framework: Minitest
 Test Coverage: 100%
 ---
 
