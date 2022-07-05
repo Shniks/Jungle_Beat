@@ -2,6 +2,7 @@
 Project Title: Jungle Beat
 Author: Nikhil Shahi
 Date: July 4, 2022
+Test Coverage: 100%
 ---
 
 Overview
