@@ -56,6 +56,10 @@ class LinkedList
     (location - 1).times do
       current_node = current_node.next_node
     end
+    inserting_the_node(data, current_node)
+  end
+
+  def inserting_the_node(data, current_node)
     inserted_node = Node.new(data)
     inserted_node.next_node = current_node.next_node
     current_node.next_node = inserted_node
