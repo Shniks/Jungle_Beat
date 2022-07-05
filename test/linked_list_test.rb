@@ -48,4 +48,15 @@ class LinkedListTest < Minitest::Test
     assert_equal 3, list.count
   end
 
+  def test_it_can_insert_a_node
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "woo")
+
+    assert_equal "dop woo plop suu", list.to_string
+    assert_equal 4, list.count
+  end
+
 end
