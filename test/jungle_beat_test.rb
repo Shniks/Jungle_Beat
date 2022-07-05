@@ -20,5 +20,14 @@ class JungleBeatTest < Minitest::Test
     assert_nil jb.list.head
   end
 
+  def test_it_can_append
+    jb = JungleBeat.new
+
+    assert_equal "deep doo ditt", jb.append("deep doo ditt")
+    assert_equal "deep", jb.list.head.data
+    assert_equal "doo", jb.list.head.next_node.data
+    assert_equal 3, jb.count 
+  end
+
 
 end
