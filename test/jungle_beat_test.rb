@@ -29,5 +29,12 @@ class JungleBeatTest < Minitest::Test
     assert_equal 3, jb.count
   end
 
+  def test_it_can_append_a_second_string
+    jb = JungleBeat.new
+    jb.append("deep doo ditt")
+
+    assert_equal "woo hoo shu", jb.append("woo hoo shu")
+    assert_equal 6, jb.count
+  end
 
 end
