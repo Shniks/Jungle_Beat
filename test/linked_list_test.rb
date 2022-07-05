@@ -14,7 +14,7 @@ class LinkedListTest < Minitest::Test
     assert_nil list.head
   end
 
-  def test_it_can_append
+  def test_it_can_append_a_single_node
     list = LinkedList.new
     list.append("doop")
 
@@ -24,6 +24,15 @@ class LinkedListTest < Minitest::Test
     assert_equal 1, list.count
   end
 
+  def test_it_can_append_multiple_nodes
+    list = LinkedList.new
+    list.append("doop")
+    list.append("deep")
 
+    assert_instance_of Node, list.head.next_node
+    assert_nil list.head.next_node.next_node
+    assert_equal 2, list.count
+    assert_equal "doop deep", list.to_string
+  end
 
 end
