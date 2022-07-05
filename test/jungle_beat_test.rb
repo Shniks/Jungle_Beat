@@ -37,4 +37,28 @@ class JungleBeatTest < Minitest::Test
     assert_equal 6, jb.count
   end
 
+  def test_it_can_play_a_sound
+    jb = JungleBeat.new
+    jb.append("deep doo ditt woo hoo shu")
+
+    assert_equal 6, jb.count
+    assert_equal 6, jb.list.count
+    jb.play
+  end
+
+  def test_it_can_play_a_song
+    jb = JungleBeat.new
+    jb.append("I don't want a lot for christmas")
+    jb.append("There is just one thing I need")
+    jb.append("I don't care about the presents")
+    jb.append("Underneath the Christmas Treeeeeeeeeeeeeeee")
+    jb.append("I just want you for my own")
+    jb.append("More than you could even know")
+    jb.append("Make my wish come true hoo")
+    jb.append("All I want for Christmas is youuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu hoooooooooooooooooooooooooooooooo")
+
+    assert_equal 51, jb.list.count
+    jb.play
+  end
+
 end
