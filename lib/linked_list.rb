@@ -66,4 +66,21 @@ class LinkedList
     @count += 1
   end
 
+  def find(location, number_of_elements)
+    current_node = head
+    location.times do
+      current_node = current_node.next_node
+    end
+    data_snip = "#{current_node.data}"
+    find_extract(number_of_elements, current_node, data_snip)
+  end
+
+  def find_extract(number_of_elements, current_node, data_snip)
+    (number_of_elements - 1).times do
+      current_node = current_node.next_node
+      data_snip << " #{current_node.data}"
+    end
+    data_snip
+  end
+
 end
