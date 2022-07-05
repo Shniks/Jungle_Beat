@@ -96,4 +96,14 @@ class LinkedList
     false
   end
 
+  def pop
+    current_node = head
+    while !current_node.next_node.next_node.nil?
+      current_node = current_node.next_node
+    end
+    data = current_node.next_node.data
+    current_node.next_node = nil
+    data
+  end
+
 end
