@@ -83,4 +83,17 @@ class LinkedList
     data_snip
   end
 
+  def includes?(value)
+    current_node = head
+    includes_traverse(value, current_node)
+  end
+
+  def includes_traverse(value, current_node)
+    while !current_node.next_node.nil?
+      return true if value == current_node.data
+      current_node = current_node.next_node
+    end
+    false
+  end
+
 end

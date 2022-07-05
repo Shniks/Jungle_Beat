@@ -83,7 +83,7 @@ class LinkedListTest < Minitest::Test
     assert_equal "woo shi shu", result_2
   end
 
-  def test_it_has_can_find_if_a_node_is_included
+  def test_it_has_can_find_if_a_value_is_included
     list = LinkedList.new
     list.append("shi")
     list.append("shu")
