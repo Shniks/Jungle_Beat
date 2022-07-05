@@ -8,4 +8,15 @@ class JungleBeat
     @list = LinkedList.new
   end
 
+  def append(data)
+    data.split(" ").each do |word|
+      list.append(word)
+    end
+    data
+  end
+
+  def count
+    list.count
+  end
+
 end
