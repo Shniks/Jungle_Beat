@@ -35,4 +35,17 @@ class LinkedListTest < Minitest::Test
     assert_equal "doop deep", list.to_string
   end
 
+  def test_it_can_insert_a_node
+    list = LinkedList.new
+    list.append("plop")
+
+    assert_equal "plop", list.to_string
+
+    list.append("suu")
+    list.prepend("dop")
+
+    assert_equal "dop plop suu", list.to_string
+    assert_equal 3, list.count 
+  end
+
 end
