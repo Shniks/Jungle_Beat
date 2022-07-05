@@ -44,4 +44,11 @@ class LinkedList
     song
   end
 
+  def prepend(data)
+    current_head = head
+    @head = Node.new(data)
+    head.next_node = current_head
+    @count += 1
+  end
+
 end
