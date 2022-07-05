@@ -82,4 +82,20 @@ class LinkedListTest < Minitest::Test
     assert_equal "shi", result_1
     assert_equal "woo shi shu", result_2
   end
+
+  def test_it_has_can_find_if_a_node_is_included
+    list = LinkedList.new
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    list.prepend("deep")
+    list.insert(1, "woo")
+
+    result_1 = list.includes?("deep")
+    result_2 = list.includes?("dep")
+
+    assert result_1
+    refute result_2
+  end
+
 end
