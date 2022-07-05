@@ -98,4 +98,17 @@ class LinkedListTest < Minitest::Test
     refute result_2
   end
 
+  def test_it_has_can_pop_an_element
+    list = LinkedList.new
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    list.prepend("deep")
+    list.insert(1, "woo")
+
+    assert_equal "blop", list.pop
+    assert_equal "shu", list.pop
+    assert_equal "deep woo shi", list.to_string
+  end
+
 end
