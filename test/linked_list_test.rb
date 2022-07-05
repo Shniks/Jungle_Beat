@@ -57,6 +57,14 @@ class LinkedListTest < Minitest::Test
 
     assert_equal "dop woo plop suu", list.to_string
     assert_equal 4, list.count
+
+    list.insert(3, "gloop")
+
+    assert_equal "dop woo plop gloop suu", list.to_string
+
+    list.insert(4, "boop")
+
+    assert_equal "dop woo plop gloop boop suu", list.to_string
   end
 
 end

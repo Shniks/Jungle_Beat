@@ -53,17 +53,13 @@ class LinkedList
 
   def insert(location, data)
     current_node = head
-    insert_traverse(location, current_node)
+    (location - 1).times do
+      current_node = current_node.next_node
+    end
     inserted_node = Node.new(data)
     inserted_node.next_node = current_node.next_node
     current_node.next_node = inserted_node
     @count += 1
-  end
-
-  def insert_traverse(location, current_node)
-    (location - 1).times do
-      current_node = current_node.next_node
-    end
   end
 
 end
