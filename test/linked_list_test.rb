@@ -26,5 +26,4 @@ class LinkedListTest < Minitest::Test
 
 
 
-
 end
